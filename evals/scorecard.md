@@ -19,7 +19,7 @@ Use this scorecard for each eval task. Score 0-2 for every category.
 
 - Task:
 - Date:
-- Codex build/version:
+- Agent client/build version:
 - Figma account plan/seat:
 - Figma file URL:
 - Prompt used:
@@ -44,4 +44,3 @@ Use this scorecard for each eval task. Score 0-2 for every category.
 - `0-4`: failing
 
 If a task is blocked because the account lacks access, write `blocked-by-access` in the notes and score only the categories that can be observed.
-

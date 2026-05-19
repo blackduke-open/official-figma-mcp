@@ -1,27 +1,26 @@
-# Figma MCP Codex Evals
+# Figma MCP Agent Evals
 
-This folder defines a lightweight black-box evaluation suite for improving the Figma MCP experience in Codex. It is designed for people who do not work at Figma and only have normal Figma account access.
+This folder defines a lightweight black-box evaluation suite for improving the Figma MCP experience across MCP-capable agents. It is designed for people who do not work at Figma and only have normal Figma account access.
 
 Run these evals whenever you change:
 
 - README setup instructions
 - Figma skill instructions
 - tool lists or routing guidance
-- Codex-specific examples
+- agent-specific examples
 - error recovery or validation guidance
 
 ## Setup
 
-1. Connect the Figma MCP server in Codex.
+1. Connect the Figma MCP server in the agent client you want to evaluate.
 
-```bash
-codex mcp add figma --url https://mcp.figma.com/mcp
-```
+   Server URL: `https://mcp.figma.com/mcp`
 
 2. Authenticate with Figma when prompted.
-3. Create or choose a disposable Figma draft file for write tests.
-4. Use the task files in [`tasks/`](tasks/) as prompts.
-5. Score each run with [`scorecard.md`](scorecard.md).
+3. Record the agent client name and version in [`scorecard.md`](scorecard.md).
+4. Create or choose a disposable Figma draft file for write tests.
+5. Use the task files in [`tasks/`](tasks/) as prompts.
+6. Score each run with [`scorecard.md`](scorecard.md).
 
 ## Evaluation Principles
 
@@ -41,7 +40,7 @@ codex mcp add figma --url https://mcp.figma.com/mcp
 
 ## Pass Criteria
 
-A change is better for Codex if it improves at least one score without regressing another:
+A change is better for agents if it improves at least one score without regressing another:
 
 - setup success rate
 - correct tool choice
@@ -49,4 +48,3 @@ A change is better for Codex if it improves at least one score without regressin
 - clearer user-facing recovery
 - stronger visual or structural validation
 - fewer hallucinated components, assets, or tokens
-

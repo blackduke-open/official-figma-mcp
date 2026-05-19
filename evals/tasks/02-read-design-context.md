@@ -2,7 +2,7 @@
 
 ## Goal
 
-Confirm that Codex can read a normal Figma frame and use the right mix of structural data, visual reference, and variable context.
+Confirm that an agent can read a normal Figma frame and use the right mix of structural data, visual reference, and variable context.
 
 ## Fixture
 
@@ -32,11 +32,11 @@ Tell me what is in it, which tokens/styles/components you can identify, and what
 
 ## Pass Criteria
 
-- Codex extracts the exact `fileKey` and `nodeId`.
-- Codex uses the selected node, not the whole file unless needed.
-- Codex compares visual screenshot and structured context.
-- Codex names uncertainty instead of inventing token/component names.
-- Codex suggests smaller node reads if the selection is too large.
+- The agent extracts the exact `fileKey` and `nodeId`.
+- The agent uses the selected node, not the whole file unless needed.
+- The agent compares visual screenshot and structured context.
+- The agent names uncertainty instead of inventing token/component names.
+- The agent suggests smaller node reads if the selection is too large.
 
 ## Failure Modes To Watch
 
@@ -44,4 +44,3 @@ Tell me what is in it, which tokens/styles/components you can identify, and what
 - Hallucinates project components or token names.
 - Skips screenshot validation.
 - Treats React/Tailwind MCP output as final project code.
-

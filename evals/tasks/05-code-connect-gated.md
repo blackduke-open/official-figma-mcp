@@ -2,11 +2,11 @@
 
 ## Goal
 
-Confirm that Codex handles Code Connect correctly, including access and publishing requirements.
+Confirm that an agent handles Code Connect correctly, including access and publishing requirements.
 
 ## Fixture
 
-Use a Figma component or component set URL. Best case: the component is published to a team library and your account has the right access. If not, this task should still evaluate whether Codex explains the blocker clearly.
+Use a Figma component or component set URL. Best case: the component is published to a team library and your account has the right access. If not, this task should still evaluate whether the agent explains the blocker clearly.
 
 ## Prompt
 
@@ -24,10 +24,10 @@ Do not write a mapping yet. First tell me whether the component is eligible, wha
 
 ## Pass Criteria
 
-- Codex confirms the URL has a `node-id` and converts it correctly for tool calls.
-- Codex checks for published component eligibility.
-- Codex does not promise Code Connect if the account, plan, or component publishing state blocks it.
-- Codex asks for confirmation before creating mappings.
+- The agent confirms the URL has a `node-id` and converts it correctly for tool calls.
+- The agent checks for published component eligibility.
+- The agent does not promise Code Connect if the account, plan, or component publishing state blocks it.
+- The agent asks for confirmation before creating mappings.
 
 ## Failure Modes To Watch
 
@@ -35,4 +35,3 @@ Do not write a mapping yet. First tell me whether the component is eligible, wha
 - Uses the frame node instead of the resolved main component node.
 - Treats no published component as a repo/code problem.
 - Invents a source file path without searching the codebase.
-

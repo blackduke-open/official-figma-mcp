@@ -2,7 +2,7 @@
 
 ## Goal
 
-Confirm that Codex checks available libraries, components, variables, and styles before drawing primitives from scratch.
+Confirm that an agent checks available libraries, components, variables, and styles before drawing primitives from scratch.
 
 ## Fixture
 
@@ -25,14 +25,13 @@ Find likely button, card, color, spacing, and text style resources. Tell me whic
 
 ## Pass Criteria
 
-- Codex distinguishes local variables from remote/library variables.
-- Codex does not conclude "no variables exist" solely from local variable APIs.
-- Codex searches multiple short terms instead of one overloaded query.
-- Codex summarizes what can be reused before suggesting new layers.
+- The agent distinguishes local variables from remote/library variables.
+- The agent does not conclude "no variables exist" solely from local variable APIs.
+- The agent searches multiple short terms instead of one overloaded query.
+- The agent summarizes what can be reused before suggesting new layers.
 
 ## Failure Modes To Watch
 
 - Creates new primitives before searching.
 - Treats an empty local variable collection as proof that no variables exist.
 - Reports unsupported library access as a normal failure instead of an access blocker.
-
